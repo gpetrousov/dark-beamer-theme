@@ -5,6 +5,13 @@
 \RequirePackage{graphicx}
 \RequirePackage{fontspec}
 \RequirePackage{listings}
+\usepackage{algorithm2e}
+\usepackage{xltxtra}
+\usepackage{xgreek}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{caption}
 
 % beamer options
 \setbeameroption{hide notes}
@@ -28,6 +35,7 @@
 \definecolor{hilight}{RGB}{102,255,204}
 \definecolor{vhilight}{RGB}{255,111,207}
 \definecolor{lolight}{RGB}{155,155,155}
+\definecolor{footcolor}{RGB}{50,81,154}
 
 % map colors to sections
 \setbeamercolor{titlelike}{fg=title}
@@ -40,6 +48,45 @@
 \setbeamertemplate{itemize subitem}{{\textendash}}
 \setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
 \setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+\setbeamercolor{section in toc}{fg=white}
+\setbeamercolor{subsection in toc}{fg=orange}
+\setbeamercolor{section in head/foot}{fg=white, bg=footcolor}
+\setbeamercolor{bibliography item}{fg=white,bg=white}
+\setbeamercolor*{bibliography entry title}{fg=white,bg=white}
+\setbeamercolor*{bibliography entry author}{fg=keywords,bg=keywords}
+
+% frame numbering
+\setbeamerfont{page number in head/foot}{size=\tiny}
+\setbeamercolor{page number in head/foot}{fg=white}
+\setbeamertemplate{footline}[frame number]
+
+% customize footer appearance
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=1.7ex,dp=1ex,center]{section in head/foot}%
+%    \usebeamerfont{author in head/foot}
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+%    \usebeamerfont{title in head/foot}\insertshorttitle
+%  \end{beamercolorbox}%
+  \begin{beamercolorbox}[ht=1.7ex,dp=1ex,left,right,center]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{60em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip-2pt%
+}
+\makeatother
+
+% set color of table keyword to yellow
+\captionsetup[table]{labelfont={color=yellow}}
+
+% customize frametitle appearance
+\setbeamertemplate{frametitle}
+	{
+	\bfseries\insertframetitle\par\vskip-6pt\hrulefill
+	}
 
 % lstlisting
 \lstset{
