@@ -5,13 +5,6 @@
 \RequirePackage{graphicx}
 \RequirePackage{fontspec}
 \RequirePackage{listings}
-\usepackage{algorithm2e}
-\usepackage{xltxtra}
-\usepackage{xgreek}
-\usepackage{listings}
-\usepackage{multirow}
-\usepackage{hyperref}
-\usepackage{caption}
 
 % beamer options
 \setbeameroption{hide notes}
@@ -35,6 +28,7 @@
 \definecolor{hilight}{RGB}{102,255,204}
 \definecolor{vhilight}{RGB}{255,111,207}
 \definecolor{lolight}{RGB}{155,155,155}
+%\definecolor{footcolor}{RGB}{162,59,59}
 \definecolor{footcolor}{RGB}{50,81,154}
 
 % map colors to sections
@@ -51,9 +45,6 @@
 \setbeamercolor{section in toc}{fg=white}
 \setbeamercolor{subsection in toc}{fg=orange}
 \setbeamercolor{section in head/foot}{fg=white, bg=footcolor}
-\setbeamercolor{bibliography item}{fg=white,bg=white}
-\setbeamercolor*{bibliography entry title}{fg=white,bg=white}
-\setbeamercolor*{bibliography entry author}{fg=keywords,bg=keywords}
 
 % frame numbering
 \setbeamerfont{page number in head/foot}{size=\tiny}
@@ -79,8 +70,25 @@
 }
 \makeatother
 
-% set color of table keyword to yellow
-\captionsetup[table]{labelfont={color=yellow}}
+%\setbeamertemplate{footline}
+%{
+%  \leavevmode%
+%  \hbox{%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%    \usebeamerfont{author in head/foot}\insertsection
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%    \usebeamerfont{title in head/foot}\insertsubsection
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+%    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+%  \end{beamercolorbox}}%
+%  \vskip0pt%
+%}
+%\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % customize frametitle appearance
 \setbeamertemplate{frametitle}
